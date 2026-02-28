@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Német Teszt - Direkt Interaktiv A1 L2</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 850px; margin: 0 auto; padding: 20px; background-color: #f0f2f5; color: #333; }
+        .quiz-container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; text-align: center; margin-bottom: 5px; }
+        .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; }
+        .section-title { background: #3498db; color: white; padding: 10px 15px; border-radius: 5px; margin-top: 40px; font-size: 1.2em; font-weight: bold; }
+        .question { margin-bottom: 25px; padding: 20px; border-bottom: 1px solid #eee; transition: background 0.3s; }
+        .question:hover { background-color: #fafafa; }
+        .question p { font-weight: 600; margin-bottom: 15px; font-size: 1.1em; }
+        .options { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        @media (max-width: 600px) { .options { grid-template-columns: 1fr; } }
+        .options li { margin: 0; }
+        .options label { cursor: pointer; display: block; padding: 10px; border: 1px solid #ddd; border-radius: 6px; transition: all 0.2s; }
+        .options label:hover { background-color: #e1f5fe; border-color: #3498db; }
+        input[type="radio"] { margin-right: 10px; transform: scale(1.2); vertical-align: middle; }
+        .btn-container { text-align: center; margin: 40px 0; }
+        button { background: #27ae60; color: white; border: none; padding: 18px 50px; border-radius: 50px; cursor: pointer; font-size: 20px; font-weight: bold; box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3); transition: transform 0.2s, background 0.3s; }
+        button:hover { background: #219150; transform: translateY(-2px); }
+        button:active { transform: translateY(0); }
+        #resultArea { margin-top: 30px; display: none; padding: 25px; border-radius: 10px; text-align: center; font-size: 1.5em; font-weight: bold; }
+        .perfect { background-color: #d4edda; color: #155724; border: 2px solid #c3e6cb; }
+        .good { background-color: #fff3cd; color: #856404; border: 2px solid #ffeeba; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Német Nyelvi Teszt</h1>
+    <p class="subtitle">Direkt Interaktiv 1 - L2: Számok, Országok, Igeragozás és Szórend</p>
+    
+    <form id="quizForm">
+        <div class="section-title">I. Számok (20 - 1000)</div>
+        
+        <div class="question"><p>1. Melyik szám a 'zwanzig'?</p><ul class="options">
+            <li><label><input type="radio" name="q1" value="0"> 12</label></li>
+            <li><label><input type="radio" name="q1" value="0"> 2</label></li>
+            <li><label><input type="radio" name="q1" value="1"> 20</label></li>
+            <li><label><input type="radio" name="q1" value="0"> 10</label></li>
+        </ul></div>
+
+        <div class="question"><p>2. Hogyan írjuk németül: 48?</p><ul class="options">
+            <li><label><input type="radio" name="q2" value="0"> vierzigacht</label></li>
+            <li><label><input type="radio" name="q2" value="1"> achtundvierzig</label></li>
+            <li><label><input type="radio" name="q2" value="0"> achtvierzig</label></li>
+            <li><label><input type="radio" name="q2" value="0"> vierundachtzig</label></li>
+        </ul></div>
+
+        <div class="question"><p>3. Melyik a helyes forma a 100-ra?</p><ul class="options">
+            <li><label><input type="radio" name="q3" value="1"> hundert</label></li>
+            <li><label><input type="radio" name="q3" value="0"> tausend</label></li>
+            <li><label><input type="radio" name="q3" value="0"> zehn</label></li>
+            <li><label><input type="radio" name="q3" value="0"> hundertundneun</label></li>
+        </ul></div>
+
+        <div class="question"><p>4. Mennyi 200 + 300 németül?</p><ul class="options">
+            <li><label><input type="radio" name="q4" value="0"> dreihundert</label></li>
+            <li><label><input type="radio" name="q4" value="1"> fünfhundert</label></li>
+            <li><label><input type="radio" name="q4" value="0"> zweihundert</label></li>
+            <li><label><input type="radio" name="q4" value="0"> sechshundert</label></li>
+        </ul></div>
+
+        <div class="question"><p>5. Hogyan mondjuk: 1000?</p><ul class="options">
+            <li><label><input type="radio" name="q5" value="0"> eins null null</label></li>
+            <li><label><input type="radio" name="q5" value="0"> hundert</label></li>
+            <li><label><input type="radio" name="q5" value="1"> tausend</label></li>
+            <li><label><input type="radio" name="q5" value="0"> million</label></li>
+        </ul></div>
+
+        <div class="section-title">II. Országok és nyelvek</div>
+
+        <div class="question"><p>6. Mi Németország német neve?</p><ul class="options">
+            <li><label><input type="radio" name="q6" value="0"> Deutsch</label></li>
+            <li><label><input type="radio" name="q6" value="1"> Deutschland</label></li>
+            <li><label><input type="radio" name="q6" value="0"> Deutscher</label></li>
+            <li><label><input type="radio" name="q6" value="0"> Berlin</label></li>
+        </ul></div>
+
+        <div class="question"><p>7. Mit beszélnek Angliában (England)?</p><ul class="options">
+            <li><label><input type="radio" name="q7" value="1"> Englisch</label></li>
+            <li><label><input type="radio" name="q7" value="0"> England</label></li>
+            <li><label><input type="radio" name="q7" value="0"> Deutsch</label></li>
+            <li><label><input type="radio" name="q7" value="0"> Französisch</label></li>
+        </ul></div>
+
+        <div class="question"><p>8. Kati kommt aus Ungarn. Sie spricht ______.</p><ul class="options">
+            <li><label><input type="radio" name="q8" value="0"> Ungarn</label></li>
+            <li><label><input type="radio" name="q8" value="1"> Ungarisch</label></li>
+            <li><label><input type="radio" name="q8" value="0"> Ungarin</label></li>
+            <li><label><input type="radio" name="q8" value="0"> Deutsch</label></li>
+        </ul></div>
+
+        <div class="question"><p>9. Hogy mondjuk: 'Franciaország'?</p><ul class="options">
+            <li><label><input type="radio" name="q9" value="1"> Frankreich</label></li>
+            <li><label><input type="radio" name="q9" value="0"> Französisch</label></li>
+            <li><label><input type="radio" name="q9" value="0"> Frank</label></li>
+            <li><label><input type="radio" name="q9" value="0"> Spanien</label></li>
+        </ul></div>
+
+        <div class="question"><p>10. Melyik állítás igaz Ausztriára?</p><ul class="options">
+            <li><label><input type="radio" name="q10" value="0"> Man spricht Österreichisch.</label></li>
+            <li><label><input type="radio" name="q10" value="1"> Man spricht Deutsch.</label></li>
+            <li><label><input type="radio" name="q10" value="0"> Das Land heißt Wien.</label></li>
+            <li><label><input type="radio" name="q10" value="0"> Man kommt aus Schweiz.</label></li>
+        </ul></div>
+
+        <div class="section-title">III. Igeragozás</div>
+
+        <div class="question"><p>11. Ich ______ aus Budapest.</p><ul class="options">
+            <li><label><input type="radio" name="q11" value="0"> kommst</label></li>
+            <li><label><input type="radio" name="q11" value="0"> kommt</label></li>
+            <li><label><input type="radio" name="q11" value="0"> kommen</label></li>
+            <li><label><input type="radio" name="q11" value="1"> komme</label></li>
+        </ul></div>
+
+        <div class="question"><p>12. Wo ______ du?</p><ul class="options">
+            <li><label><input type="radio" name="q12" value="1"> wohnst</label></li>
+            <li><label><input type="radio" name="q12" value="0"> wohnt</label></li>
+            <li><label><input type="radio" name="q12" value="0"> wohnen</label></li>
+            <li><label><input type="radio" name="q12" value="0"> wohne</label></li>
+        </ul></div>
+
+        <div class="question"><p>13. Das ______ Peter.</p><ul class="options">
+            <li><label><input type="radio" name="q13" value="0"> bist</label></li>
+            <li><label><input type="radio" name="q13" value="1"> ist</label></li>
+            <li><label><input type="radio" name="q13" value="0"> sind</label></li>
+            <li><label><input type="radio" name="q13" value="0"> seid</label></li>
+        </ul></div>
+
+        <div class="question"><p>14. Er ______ gut Deutsch. (sprechen)</p><ul class="options">
+            <li><label><input type="radio" name="q14" value="0"> sprecht</label></li>
+            <li><label><input type="radio" name="q14" value="1"> spricht</label></li>
+            <li><label><input type="radio" name="q14" value="0"> sprechen</label></li>
+            <li><label><input type="radio" name="q14" value="0"> sprichst</label></li>
+        </ul></div>
+
+        <div class="question"><p>15. Wir ______ Schüler.</p><ul class="options">
+            <li><label><input type="radio" name="q15" value="1"> sind</label></li>
+            <li><label><input type="radio" name="q15" value="0"> seid</label></li>
+            <li><label><input type="radio" name="q15" value="0"> ist</label></li>
+            <li><label><input type="radio" name="q15" value="0"> bin</label></li>
+        </ul></div>
+
+        <div class="question"><p>16. Was ______ du? (lesen)</p><ul class="options">
+            <li><label><input type="radio" name="q16" value="0"> lese</label></li>
+            <li><label><input type="radio" name="q16" value="1"> liest</label></li>
+            <li><label><input type="radio" name="q16" value="0"> lest</label></li>
+            <li><label><input type="radio" name="q16" value="0"> lesen</label></li>
+        </ul></div>
+
+        <div class="question"><p>17. Wie ______ ihr?</p><ul class="options">
+            <li><label><input type="radio" name="q17" value="1"> heißt</label></li>
+            <li><label><input type="radio" name="q17" value="0"> heißen</label></li>
+            <li><label><input type="radio" name="q17" value="0"> heiße</label></li>
+            <li><label><input type="radio" name="q17" value="0"> heißest</label></li>
+        </ul></div>
+
+        <div class="question"><p>18. Ihr ______ Englisch. (sprechen)</p><ul class="options">
+            <li><label><input type="radio" name="q18" value="0"> spricht</label></li>
+            <li><label><input type="radio" name="q18" value="1"> sprecht</label></li>
+            <li><label><input type="radio" name="q18" value="0"> sprechen</label></li>
+            <li><label><input type="radio" name="q18" value="0"> sprichst</label></li>
+        </ul></div>
+
+        <div class="question"><p>19. Wir ______ zusammen.</p><ul class="options">
+            <li><label><input type="radio" name="q19" value="0"> lerne</label></li>
+            <li><label><input type="radio" name="q19" value="1"> lernen</label></li>
+            <li><label><input type="radio" name="q19" value="0"> lernt</label></li>
+            <li><label><input type="radio" name="q19" value="0"> lernst</label></li>
+        </ul></div>
+
+        <div class="question"><p>20. Ihr ______ sehr nett.</p><ul class="options">
+            <li><label><input type="radio" name="q20" value="0"> sind</label></li>
+            <li><label><input type="radio" name="q20" value="0"> bist</label></li>
+            <li><label><input type="radio" name="q20" value="1"> seid</label></li>
+            <li><label><input type="radio" name="q20" value="0"> ist</label></li>
+        </ul></div>
+
+        <div class="section-title">IV. Szórend és mondatalkotás</div>
+
+        <div class="question"><p>21. in / wohnt / Berlin / er</p><ul class="options">
+            <li><label><input type="radio" name="q21" value="0"> Er in Berlin wohnt.</label></li>
+            <li><label><input type="radio" name="q21" value="0"> Wohnt er in Berlin.</label></li>
+            <li><label><input type="radio" name="q21" value="1"> Er wohnt in Berlin.</label></li>
+            <li><label><input type="radio" name="q21" value="0"> Berlin er wohnt in.</label></li>
+        </ul></div>
+
+        <div class="question"><p>22. kommst / woher / du / ?</p><ul class="options">
+            <li><label><input type="radio" name="q22" value="0"> Woher du kommst?</label></li>
+            <li><label><input type="radio" name="q22" value="1"> Woher kommst du?</label></li>
+            <li><label><input type="radio" name="q22" value="0"> Du kommst woher?</label></li>
+            <li><label><input type="radio" name="q22" value="0"> Kommst woher du?</label></li>
+        </ul></div>
+
+        <div class="question"><p>23. ihr / lernt / Deutsch / ?</p><ul class="options">
+            <li><label><input type="radio" name="q23" value="0"> Ihr lernt Deutsch?</label></li>
+            <li><label><input type="radio" name="q23" value="0"> Deutsch lernt ihr?</label></li>
+            <li><label><input type="radio" name="q23" value="1"> Lernt ihr Deutsch?</label></li>
+            <li><label><input type="radio" name="q23" value="0"> Lernt Deutsch ihr?</label></li>
+        </ul></div>
+
+        <div class="question"><p>24. ist / Telefonnummer / meine / 20 30 40</p><ul class="options">
+            <li><label><input type="radio" name="q24" value="1"> Meine Telefonnummer ist 20 30 40.</label></li>
+            <li><label><input type="radio" name="q24" value="0"> Meine Telefonnummer 20 30 40 ist.</label></li>
+            <li><label><input type="radio" name="q24" value="0"> Ist meine Telefonnummer 20 30 40.</label></li>
+            <li><label><input type="radio" name="q24" value="0"> 20 30 40 meine Telefonnummer ist.</label></li>
+        </ul></div>
+
+        <div class="question"><p>25. er / gut / spricht / Englisch</p><ul class="options">
+            <li><label><input type="radio" name="q25" value="1"> Er spricht gut Englisch.</label></li>
+            <li><label><input type="radio" name="q25" value="0"> Er gut spricht Englisch.</label></li>
+            <li><label><input type="radio" name="q25" value="0"> Gut er spricht Englisch.</label></li>
+            <li><label><input type="radio" name="q25" value="0"> Englisch spricht gut er.</label></li>
+        </ul></div>
+
+        <div class="btn-container">
+            <button type="button" onclick="checkQuiz()">Eredmények ellenőrzése</button>
+        </div>
+    </form>
+    
+    <div id="resultArea"></div>
+</div>
+
+<script>
+    function checkQuiz() {
+        let score = 0;
+        const total = 25;
+        const form = document.getElementById('quizForm');
+        const formData = new FormData(form);
+        
+        let answeredCount = 0;
+        for (let value of formData.values()) {
+            score += parseInt(value);
+            answeredCount++;
+        }
+
+        const resultArea = document.getElementById('resultArea');
+        resultArea.style.display = 'block';
+        
+        if (answeredCount < total) {
+            resultArea.innerHTML = "⚠️ Kérlek, minden kérdésre válaszolj!<br><small>Eddig kitöltve: " + answeredCount + " / " + total + "</small>";
+            resultArea.className = "good";
+        } else {
+            const percent = Math.round((score / total) * 100);
+            let message = "";
+            
+            if (percent === 100) message = "🌟 Tökéletes! Gratulálok!";
+            else if (percent >= 80) message = "👏 Nagyon szép munka!";
+            else if (percent >= 50) message = "👍 Jó úton haladsz, de gyakorolj még!";
+            else message = "📚 Érdemes még átnézned a leckét.";
+
+            resultArea.innerHTML = message + "<br>Eredményed: " + percent + "% (" + score + " / " + total + ")";
+            resultArea.className = percent >= 80 ? "perfect" : "good";
+        }
+        
+        resultArea.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

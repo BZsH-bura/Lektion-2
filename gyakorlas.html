@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Német Gyakorló: Híres emberek és Árak</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .card {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .card:last-child {
+            border-bottom: none;
+        }
+        .card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: 3px solid #fff;
+            background-color: #eee;
+        }
+        .inputs {
+            flex-grow: 1;
+        }
+        input {
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            padding: 6px;
+            margin: 3px 0;
+            font-size: 16px;
+            width: 140px;
+            transition: all 0.3s;
+        }
+        input:focus {
+            border-color: #3498db;
+            outline: none;
+            background-color: #f0f8ff;
+        }
+        .line {
+            margin-bottom: 8px;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+            box-shadow: 0 4px 0 #219150;
+        }
+        button:hover {
+            background-color: #2ecc71;
+        }
+        /* Visszajelzés stílusok */
+        .correct {
+            border-color: #27ae60 !important;
+            background-color: #d4edda !important;
+        }
+        .wrong {
+            border-color: #e74c3c !important;
+            background-color: #f8d7da !important;
+        }
+        .solution-text {
+            display: none;
+            color: #c0392b;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-left: 10px;
+            background-color: #fadbd8;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        .show-sol {
+            display: inline-block;
+        }
+        @media (max-width: 600px) {
+            .card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🇩🇪 Német Gyakorló Feladatok</h1>
+    <p style="text-align:center;">Töltsd ki az üres mezőket, majd kattints az alsó zöld gombra!</p>
+
+    <div class="container">
+        <h2>1. Wer bin ich? (Híres emberek)</h2>
+        
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Beyonce_Knowles_with_necklaces.jpg" alt="Beyoncé">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="Beyoncé">.<span class="solution-text">Beyoncé</span></div>
+                <div class="line">Sie kommt <input type="text" data-answer="aus den USA">.<span class="solution-text">aus den USA</span></div>
+                <div class="line">Sie ist <input type="text" data-answer="Sängerin">.<span class="solution-text">Sängerin</span></div>
+                <div class="line">Sie spricht <input type="text" data-answer="Englisch">.<span class="solution-text">Englisch</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cristiano_Ronaldo_20120609.jpg" alt="Ronaldo">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="Cristiano Ronaldo">.<span class="solution-text">Cristiano Ronaldo</span></div>
+                <div class="line">Er kommt <input type="text" data-answer="aus Portugal">.<span class="solution-text">aus Portugal</span></div>
+                <div class="line">Er ist <input type="text" data-answer="Fußballspieler">.<span class="solution-text">Fußballspieler</span></div>
+                <div class="line">Er spricht <input type="text" data-answer="Portugiesisch">.<span class="solution-text">Portugiesisch</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Judit_Polgar_play_simul.jpg" alt="Polgár Judit">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="Judit Polgár">.<span class="solution-text">Judit Polgár</span></div>
+                <div class="line">Sie kommt <input type="text" data-answer="aus Ungarn">.<span class="solution-text">aus Ungarn</span></div>
+                <div class="line">Sie ist <input type="text" data-answer="Schachspielerin">.<span class="solution-text">Schachspielerin</span></div>
+                <div class="line">Sie spricht <input type="text" data-answer="Ungarisch">.<span class="solution-text">Ungarisch</span></div>
+            </div>
+        </div>
+
+         <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Einstein_Head.jpg" alt="Einstein">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="Albert Einstein">.<span class="solution-text">Albert Einstein</span></div>
+                <div class="line">Er kommt <input type="text" data-answer="aus Deutschland">.<span class="solution-text">aus Deutschland</span></div>
+                <div class="line">Er ist <input type="text" data-answer="Physiker">.<span class="solution-text">Physiker</span></div>
+                <div class="line">Er spricht <input type="text" data-answer="Deutsch">.<span class="solution-text">Deutsch</span></div>
+            </div>
+        </div>
+
+         <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Belmondo_1960.jpg" alt="Belmondo">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="Jean-Paul Belmondo">.<span class="solution-text">Jean-Paul Belmondo</span></div>
+                <div class="line">Er kommt <input type="text" data-answer="aus Frankreich">.<span class="solution-text">aus Frankreich</span></div>
+                <div class="line">Er ist <input type="text" data-answer="Schauspieler">.<span class="solution-text">Schauspieler</span></div>
+                <div class="line">Er spricht <input type="text" data-answer="Französisch">.<span class="solution-text">Französisch</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>2. Was kostet das? (Árak)</h2>
+        <p>Írd be a tárgy nevét <b>névelővel</b> (pl. <i>ein Laptop</i>) és az árát <b>számmal</b>!</p>
+
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Android_smartphone.jpg" alt="Handy">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="ein Handy" placeholder="tárgy">. <span class="solution-text">ein Handy</span></div>
+                <div class="line">Es kostet <input type="text" data-answer="850" placeholder="ár"> Euro. <span class="solution-text">850</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Laptop.jpg" alt="Laptop">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="ein Laptop">. <span class="solution-text">ein Laptop</span></div>
+                <div class="line">Er kostet <input type="text" data-answer="1200"> Euro. <span class="solution-text">1200</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2024_Dacia_Sandero_III_GIMS_2024_1X7A2018.jpg" alt="Auto">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="ein Auto">. <span class="solution-text">ein Auto</span></div>
+                <div class="line">Es kostet <input type="text" data-answer="9500"> Euro. <span class="solution-text">9500</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Desktop_personal_computer.jpg" alt="Computer">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="ein Computer">. <span class="solution-text">ein Computer</span></div>
+                <div class="line">Er kostet <input type="text" data-answer="1500"> Euro. <span class="solution-text">1500</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sneakers_.jpg" alt="Schuhe">
+            <div class="inputs">
+                <div class="line">Das sind <input type="text" data-answer="Sportschuhe">. <span class="solution-text">Sportschuhe</span></div>
+                <div class="line">Sie kosten <input type="text" data-answer="110"> Euro. <span class="solution-text">110</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Commuting_by_bicycle.jpg" alt="Fahrrad">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="ein Fahrrad">. <span class="solution-text">ein Fahrrad</span></div>
+                <div class="line">Es kostet <input type="text" data-answer="450"> Euro. <span class="solution-text">450</span></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pullover.jpg" alt="Pullover">
+            <div class="inputs">
+                <div class="line">Das ist <input type="text" data-answer="ein Pullover">. <span class="solution-text">ein Pullover</span></div>
+                <div class="line">Er kostet <input type="text" data-answer="40"> Euro. <span class="solution-text">40</span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <button onclick="checkAllAnswers()">Ellenőrzés (Überprüfen)</button>
+
+    <script>
+        function checkAllAnswers() {
+            const allInputs = document.querySelectorAll('input');
+            let correctCount = 0;
+            
+            allInputs.forEach(input => {
+                // A data-answer-ből vesszük a helyes választ, levágjuk a felesleget és kisbetűsítjük
+                const correctAnswer = input.getAttribute('data-answer').trim().toLowerCase();
+                const userAnswer = input.value.trim().toLowerCase();
+                const solutionSpan = input.nextElementSibling;
+                
+                // Ellenőrzés
+                if (userAnswer === correctAnswer) {
+                    input.classList.add('correct');
+                    input.classList.remove('wrong');
+                    if(solutionSpan) solutionSpan.classList.remove('show-sol');
+                    correctCount++;
+                } else {
+                    input.classList.add('wrong');
+                    input.classList.remove('correct');
+                    if(solutionSpan) solutionSpan.classList.add('show-sol');
+                }
+            });
+            
+            // Üzenet a végén
+            if (correctCount === allInputs.length) {
+                alert("Gratulálok! Minden válasz helyes! Kiváló munka! 🌟");
+            } else {
+                alert("Az ellenőrzés kész! A hibás válaszokat pirossal jelöltem, mellettük látod a helyes megoldást.");
+            }
+        }
+    </script>
+</body>
+</html>
